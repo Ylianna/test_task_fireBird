@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestTask</title>
+    <link rel="stylesheet" href="fireBird.css">
+    <script src="fireBird.js"></script>
+</head>
+<body>
+<section>
+    <h1>FireBird Table</h1>
+    <div class="action_container">
+        <button id="resetButton" class="button_reset" onclick="resetSets()">Reset</button>
+        <input class="input_search" id="search" placeholder="Search..."/>
+    </div>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+            <tr>
+                <th>Action</th>
+                <th>Name</th>
+                <th>UserName</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody id="data">
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div id="infoModal" style="display: none" class="overlay">
+    <div class="operation-wrapper">
+        <div class="operation-content">
+            <a onclick="closeInfoModal()" class="close">x</a>
+            <h3 class="name-form">Information</h3>
+            <form class="info-form" onsubmit="return false">
+                <div class="form_info">
+                    <div id="company"></div>
+                    <div class="form_title" id="address"></div>
+                </div>
+                <div class="button-panel">
+                    <button onclick="closeInfoModal()" class="buttonSub">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
